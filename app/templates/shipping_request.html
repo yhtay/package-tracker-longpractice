@@ -1,0 +1,17 @@
+
+
+{% block content %}
+    <div>
+        <h2>Shipping</h2>
+        <form action="/new_package" method="POST">
+            {{ form.csrf_token }}
+            <p>{{ form.sender.label }}: {{ form.sender }}</p>
+            <p>{{ form.recipient.label }}: {{ form.recipient }}</p>
+            <p>{{ form.origin.label }}: {{form.origin}}</p>
+            <p>{{ form.destination.label }}: {{form.destination}}</p>
+            <p>{{ form.express_shipping.label }}: {{ form.express_shipping }}</p>
+            <p>{{ form.submit }}</p>
+            <p>{{ form.cancel }}</p>
+        </form>
+    </div>
+{% endblock %}

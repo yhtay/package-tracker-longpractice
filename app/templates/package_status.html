@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Package Tracker</title>
+</head>
+<body>
+    <h1>Package Tracker</h1>
+    {% for package in packages %}
+    <div>
+        <p>id: {{ package.id }}</p>
+        <p>Sender: {{ package.sender }}</p>
+        <p>Recipient: {{ package.recipient }}</p>
+        <p>Origin: {{ package.origin }}</p>
+        <p>Desitnation: {{ package.destination }}</p>
+        <p>Location: {{ package.location }}</p>
+    </div>
+    {% endfor %}
+</body>
+</html>
