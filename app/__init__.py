@@ -26,7 +26,8 @@ def new_package():
             sender = data['sender'],
             recipient = data['recipient'],
             origin = data['origin'],
-            destination = data['destination']
+            destination = data['destination'],
+            location=data["origin"]
         )
         db.session.add(new_package)
         db.session.commit()
